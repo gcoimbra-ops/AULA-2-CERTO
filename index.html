@@ -1,273 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alfabetização Digital: Verdade na Rede</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-        
-        :root {
-            --primary: #0066cc;
-            --danger: #e63939;
-            --success: #2a9d8f;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
-        
-        header {
-            background: linear-gradient(135deg, var(--primary), #003366);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-        
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        h2 {
-            color: var(--primary);
-            margin: 2rem 0 1rem;
-            border-bottom: 3px solid var(--primary);
-            padding-bottom: 10px;
-        }
-        
-        section {
-            background: white;
-            margin: 2rem 0;
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-        
-        .hero {
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-        
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .stat-card {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            flex: 1;
-            min-width: 220px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-        
-        .tip {
-            background: #f0f8ff;
-            border-left: 6px solid var(--primary);
-            padding: 1.2rem;
-            margin: 1.2rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        button {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 14px 32px;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin: 10px;
-        }
-        
-        button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,102,204,0.3);
-        }
-        
-        .fake-example {
-            background: #fff5f5;
-            border: 2px dashed #e63939;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 12px;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 3rem 0;
-            background: #333;
-            color: white;
-            margin-top: 3rem;
-        }
-        
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>🛡️ Verdade na Rede</h1>
-            <p style="font-size: 1.4rem; opacity: 0.95;">Alfabetização Digital e Combate às Fake News</p>
-            <div class="nav">
-                <a href="#introducao">Introdução</a>
-                <a href="#dados">Dados</a>
-                <a href="#desafios">Desafios</a>
-                <a href="#dicas">Dicas Práticas</a>
-            </div>
-        </div>
-    </header>
-
-    <div class="container">
-        <!-- Hero -->
-        <section class="hero" id="introducao">
-            <h2>Bem-vindo à aula sobre o mundo digital</h2>
-            <p style="font-size: 1.3rem; max-width: 800px; margin: 1.5rem auto;">
-                A internet ocupa um papel central no acesso à informação. Mais de 90% dos lares brasileiros estão conectados. 
-                Mas com grande poder de comunicação vem grande responsabilidade.
-            </p>
-            <button onclick="document.getElementById('dicas').scrollIntoView({ behavior: 'smooth' })">
-                Aprender a verificar informações →
-            </button>
-        </section>
-
-        <!-- Dados -->
-        <section id="dados">
-            <h2>📊 A Realidade no Brasil</h2>
-            <div class="stats">
-                <div class="stat-card">
-                    <div class="stat-number">90%+</div>
-                    <p>dos lares brasileiros conectados (IBGE)</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">62%</div>
-                    <p>dos brasileiros já acreditaram em fake news (Kaspersky)</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">Milhões</div>
-                    <p>de pessoas impactadas por desinformação durante a pandemia</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Exemplo -->
-        <section>
-            <h2>🚨 Um exemplo real</h2>
-            <div class="fake-example">
-                <strong>Durante a pandemia circulou:</strong><br><br>
-                “Gargarejo com água morna previne COVID-19”<br><br>
-                <em>→ Informação falsa que colocou a saúde de muitas pessoas em risco.</em>
-            </div>
-            <p>Manchetes sensacionalistas e conteúdos sem verificação circulam muito rápido nas redes sociais.</p>
-        </section>
-
-        <!-- Desafios -->
-        <section id="desafios">
-            <h2>⚠️ Os Desafios</h2>
-            <ul style="font-size: 1.15rem; line-height: 2;">
-                <li>Distinguir o que é verdadeiro do que é falso</li>
-                <li>Resistir a manchetes “gritantes” e sensacionalistas</li>
-                <li>Entender o impacto das nossas postagens</li>
-                <li>Desenvolver uma postura crítica (sem virar cético de tudo)</li>
-            </ul>
-        </section>
-
-        <!-- Dicas -->
-        <section id="dicas">
-            <h2>🛠️ Dicas Práticas para uma Navegação Segura</h2>
-            
-            <div class="tip">
-                <strong>1. Pause antes de compartilhar</strong><br>
-                Pergunte: Qual é a fonte? Tem data? É sensacionalista?
-            </div>
-            
-            <div class="tip">
-                <strong>2. Verifique em fontes confiáveis</strong><br>
-                Use: Agência Lupa, Aos Fatos, FactCheck.org, Google (busca reversa)
-            </div>
-            
-            <div class="tip">
-                <strong>3. Diversifique suas fontes</strong><br>
-                Consuma veículos de diferentes linhas editoriais
-            </div>
-            
-            <div class="tip">
-                <strong>4. Pense no impacto</strong><br>
-                Cada postagem pode influenciar muitas pessoas. Publique com responsabilidade.
-            </div>
-        </section>
-
-        <div style="text-align: center; margin: 3rem 0;">
-            <button onclick="alert('Ótimo! Você está no caminho certo para uma internet mais consciente! 🌟')">
-                Eu me comprometo a verificar antes de compartilhar
-            </button>
-        </div>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p><strong>Feito para educação digital • 2026</strong></p>
-            <p>Desenvolvido com ❤️ para conscientização</p>
-        </div>
-    </footer>
-
-    <script>
-        // Simple smooth scroll and interaction
-        console.log("%cSite de Alfabetização Digital carregado com sucesso!", "color: #0066cc; font-size: 14px;");
-        
-        // Add some interactivity
-        document.addEventListener('DOMContentLoaded', () => {
-            const cards = document.querySelectorAll('.stat-card');
-            cards.forEach((card, index) => {
-                card.style.opacity = '0';
-                setTimeout(() => {
-                    card.style.transition = 'all 0.6s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, 300 * index);
-            });
-        });
-    </script>
-</body>
-</html>
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+  <head> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Flashcards de Mitos e Verdades</title> 
+  </head> 
+  <body> 
+    <header> 
+    </header> 
+ 
+    <main> 
+    </main> 
+ 
+    <footer> 
+    </footer> 
+  </body> 
+</html> 
+<header> 
+  <h1>Confere Aí</h1> 
+  <nav> 
+    <a href="#">Início</a> 
+  </nav> 
+</header> 
+<main> 
+  <h2>Descubra a verdade passando o mouse</h2> 
+  <section> 
+    <article> 
+      <div> 
+        <div> 
+          <img src="" alt="Pinguim" class="cartao-imagem"> 
+          <p>O corinthias é o time mais antigo do brasil? verdadeiro ou falso?</p> 
+        </div> 
+        <div class="cartao-verso"> 
+          <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim" class="cartao-imagem"> 
+          <p>Pinguins não voam, mas são excelentes nadadores.</p> 
+        </div> 
+      </div> 
+    </article> 
+  </section> 
+</main> 
+<footer> 
+  <p>Projeto feito por Gabriel Alves.</p> 
+</footer> 
