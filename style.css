@@ -23,6 +23,11 @@ body {
 .cabecalho-link {
     color: #0b0b0b;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.cabecalho-link:hover {
+    text-decoration: underline;
 }
 
 h1 {
@@ -35,36 +40,47 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 0;
+    padding: 40px 20px;
 }
 
 main h2 {
     margin-bottom: 30px;
     color: #0d0d0d;
     text-align: center;
+    max-width: 800px;
 }
 
 footer {
     background-color: #a5e70c;
-    padding: 15px 25px;
+    padding: 20px 25px;
     color: #0b0b0b;
     text-align: center;
 }
 
+footer h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+footer p {
+    font-size: 14px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
 
 section {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
-    max-width: 1192px; 
+    max-width: 1200px; 
     width: 100%;
-    padding: 0 20px;
 }
 
 .cartao {
     width: 280px;
-    height: 360px;
+    height: 380px; /* Aumentado levemente para acomodar textos maiores */
     position: relative;
     perspective: 1000px;
 }
@@ -102,7 +118,7 @@ section {
 
 .cartao-imagem {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
 }
 
@@ -118,24 +134,22 @@ section {
     justify-content: center;
 }
 
+/* Responsividade */
 @media (max-width: 1200px) {
     section {
-        max-width: 600px; /* 2 x 280px + 1 gap x 24px */
+        max-width: 620px; 
     }
 }
 
 @media (max-width: 650px) {
     section {
-        max-width: 320px;
+        max-width: 100%;
         gap: 16px;
     }
     
     .cartao {
         width: 100%;
-        height: 340px;
-    }
-    
-    .cartao-imagem {
-        height: 180px;
+        max-width: 320px;
+        height: 360px;
     }
 }
